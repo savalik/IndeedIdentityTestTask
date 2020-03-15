@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "b5d2f36d-8d7e-4f57-85ff-1ac2a4646cba",
+		"name": "IndeedIdentity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Replenish",
+			"item": [
+				{
+					"name": "Replenish",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 10.0,\n    \"currency\": \"USD\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/wallet/7tB8T_pVpE_m84qiEhls9g/replenish",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"7tB8T_pVpE_m84qiEhls9g",
+								"replenish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replenish(400 - bad currency)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 10.0,\n    \"currency\": \"XXX\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/wallet/7tB8T_pVpE_m84qiEhls9g/replenish",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"7tB8T_pVpE_m84qiEhls9g",
+								"replenish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replenish(400 - bad amount)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 0.0,\n    \"currency\": \"XXX\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/wallet/7tB8T_pVpE_m84qiEhls9g/replenish",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"7tB8T_pVpE_m84qiEhls9g",
+								"replenish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Replenish(404)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 10.0,\n    \"currency\": \"USD\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/wallet/Wt6WitSDCkqPAeaKd71d1A/replenish",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"Wt6WitSDCkqPAeaKd71d1A",
+								"replenish"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Withdraw",
+			"item": [
+				{
+					"name": "Withdraw",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 20.0,\n    \"currency\": \"USD\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/wallet/7tB8T_pVpE_m84qiEhls9g/withdraw",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"7tB8T_pVpE_m84qiEhls9g",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Withdraw(422_NotEnoughMoney)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 20000000.0,\n    \"currency\": \"USD\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/wallet/7tB8T_pVpE_m84qiEhls9g/withdraw",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"7tB8T_pVpE_m84qiEhls9g",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Exchange",
+			"item": [
+				{
+					"name": "Exchange",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 1.0,\n    \"currencyFrom\": \"USD\",\n    \"currencyTo\": \"RUB\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/wallet/7tB8T_pVpE_m84qiEhls9g/exchange",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"7tB8T_pVpE_m84qiEhls9g",
+								"exchange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange(422_NotEnoughMoney)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 2000000.0,\n    \"currencyFrom\": \"USD\",\n    \"currencyTo\": \"RUB\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/wallet/7tB8T_pVpE_m84qiEhls9g/exchange",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"wallet",
+								"7tB8T_pVpE_m84qiEhls9g",
+								"exchange"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "GetWalletStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/wallet/7tB8T_pVpE_m84qiEhls9g",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"wallet",
+						"7tB8T_pVpE_m84qiEhls9g"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
