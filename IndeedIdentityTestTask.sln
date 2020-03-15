@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29827.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndeedIdentityTestTask.Host", "IndeedIdentityTestTask.Host\IndeedIdentityTestTask.Host.csproj", "{4F420ECC-777C-4866-821A-CCA19C31840E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndeedIdentityTestTask.BL", "IndeedIndentityTestTask.BL\IndeedIdentityTestTask.BL.csproj", "{63484099-DB69-4FB4-A80E-5DF40A045BAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndeedIdentityTestTask.BL", "IndeedIdentityTestTask.BL\IndeedIdentityTestTask.BL.csproj", "{63484099-DB69-4FB4-A80E-5DF40A045BAD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IndeedIdentityTestTask.DA", "IndeedIdentityTestTask.DA\IndeedIdentityTestTask.DA.csproj", "{303B5B76-8A20-4146-8CC2-A418EE2DCA6A}"
 	ProjectSection(ProjectDependencies) = postProject

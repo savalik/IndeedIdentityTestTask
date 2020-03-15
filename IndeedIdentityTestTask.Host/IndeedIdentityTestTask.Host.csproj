@@ -12,9 +12,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IndeedIdentityTestTask.BL.Contract\IndeedIdentityTestTask.BL.Contract.csproj" />
+    <ProjectReference Include="..\IndeedIdentityTestTask.BL\IndeedIdentityTestTask.BL.csproj" />
     <ProjectReference Include="..\IndeedIdentityTestTask.DA.Contract\IndeedIdentityTestTask.DA.Contract.csproj" />
     <ProjectReference Include="..\IndeedIdentityTestTask.DA\IndeedIdentityTestTask.DA.csproj" />
-    <ProjectReference Include="..\IndeedIndentityTestTask.BL\IndeedIdentityTestTask.BL.csproj" />
   </ItemGroup>
 
 
