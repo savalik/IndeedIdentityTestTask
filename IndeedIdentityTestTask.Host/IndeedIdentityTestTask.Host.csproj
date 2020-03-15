@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IndeedIdentityTestTask.BL.Contract\IndeedIdentityTestTask.BL.Contract.csproj" />
+    <ProjectReference Include="..\IndeedIdentityTestTask.DA.Contract\IndeedIdentityTestTask.DA.Contract.csproj" />
+    <ProjectReference Include="..\IndeedIdentityTestTask.DA\IndeedIdentityTestTask.DA.csproj" />
+    <ProjectReference Include="..\IndeedIndentityTestTask.BL\IndeedIdentityTestTask.BL.csproj" />
+  </ItemGroup>
+
+
+</Project>
